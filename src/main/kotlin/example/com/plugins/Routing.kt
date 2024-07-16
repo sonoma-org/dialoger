@@ -15,7 +15,13 @@ fun Application.configureRouting(client: HttpClient) {
 
     routing {
         get("/") {
-            call.respondText("Hello World!")
+            call.respondRedirect("/static/index.html")
+        }
+        get("/login") {
+            call.respondRedirect("/static/login.html")
+        }
+        get("/register") {
+            call.respondRedirect("/static/reg.html")
         }
         authenticate() {
             get("/api/login") {

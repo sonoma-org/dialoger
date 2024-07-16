@@ -43,5 +43,11 @@ fun Application.configureRouting(client: HttpClient) {
         static("/static") {
             resources("static")
         }
+        static("/css") {
+            resources("static/css")
+        }
+        static("/images") {
+            resources("static/images")
+        }
     }
 }

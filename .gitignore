@@ -1,3 +1,8 @@
 .gradle
 build
 .kotlin
+.venv
+dialoger-auth.log
+src/main/python/__pycache__
+src/main/python/models/__pycache__
+.idea

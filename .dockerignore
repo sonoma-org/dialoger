@@ -1,0 +1,6 @@
+.venv
+.kotlin
+.venv
+build
+docker
+src/main/python

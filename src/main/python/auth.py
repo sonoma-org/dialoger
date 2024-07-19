@@ -19,8 +19,18 @@ def verify(credentials: Annotated[HTTPBasicCredentials, Depends(security)]):
 def register(username: str, password: str):
     if not DataBase().register_user(username, password):
         raise HTTPException(
-            status_code=401,
+            status_code=409,
             detail="Duplicate username",
+            headers={"WWW-Authenticate": "Basic"},
+        )
+    else:
+        return True
+    
+def login(username: str, password: str):
+    if not DataBase().get_user(username, password):
+        raise HTTPException(
+            status_code=401,
+            detail="Incorrect username or password",
             headers={"WWW-Authenticate": "Basic"},
         )
     else:

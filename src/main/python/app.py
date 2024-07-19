@@ -23,6 +23,11 @@ class App:
     async def register(self: Request, user: User):
         if auth.register(username=user.username, password=user.password):
             return HTTPException(200)
+        
+    @app.post('/login')
+    async def register(self: Request, user: User):
+        if auth.login(username=user.username, password=user.password):
+            return HTTPException(200)
 
     @staticmethod
     def init():

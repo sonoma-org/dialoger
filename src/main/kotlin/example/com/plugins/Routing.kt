@@ -23,10 +23,15 @@ fun Application.configureRouting(client: HttpClient) {
         get("/register") {
             call.respondRedirect("/static/reg.html")
         }
-        authenticate() {
-            get("/api/login") {
-                call.respondText("Hello, ${call.principal<UserIdPrincipal>()?.name}!")
+        authenticate() {}
+        post("/api/login") {
+            val body = call.receiveText()
+
+            val result = client.get("login") {
+                setBody(body)
+                contentType(ContentType.Application.Json)
             }
+            call.response.status(result.status)
         }
         post("/api/register") {
             val body = call.receiveText()
@@ -35,7 +40,6 @@ fun Application.configureRouting(client: HttpClient) {
                 setBody(body)
                 contentType(ContentType.Application.Json)
             }
-
             call.response.status(result.status)
         }
 

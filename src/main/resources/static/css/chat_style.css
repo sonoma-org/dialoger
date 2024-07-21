@@ -124,6 +124,7 @@ body{
     border-radius: 50%;
     float: left;
     margin-left: 2px;
+    background-color: rgb(237, 237, 237);
 }
 
 .chat #user_2_picture {
@@ -137,4 +138,5 @@ body{
     float: right;
     margin-top: 50px;
     margin-left: 2px;
+    background-color: rgb(237, 237, 237);
 }

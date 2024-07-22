@@ -23,6 +23,7 @@ repositories {
 
 dependencies {
     implementation("io.ktor:ktor-client-cio")
+    implementation("io.ktor:ktor-server-websockets:2.3.12")
     implementation("io.ktor:ktor-server-core-jvm")
     implementation("io.ktor:ktor-server-host-common-jvm")
     implementation("io.ktor:ktor-server-auth-jvm")

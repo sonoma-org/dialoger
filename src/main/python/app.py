@@ -17,7 +17,7 @@ class App:
     
     @app.post('/auth')
     async def login(self: Request, user = Depends(auth.verify)):
-        return HTTPException(200)
+        return HTTPException(200) 
 
     @app.post('/register')
     async def register(self: Request, user: User):

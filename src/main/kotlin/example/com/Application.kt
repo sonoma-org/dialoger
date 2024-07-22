@@ -18,10 +18,10 @@ fun Application.module() {
         }
     }
 
-    install(WebSockets) {
-        maxFrameSize = Long.MAX_VALUE
-        masking = false
-    }
+//    install(WebSockets) {
+//         maxFrameSize = Long.MAX_VALUE
+ //        masking = false
+ //    }
 
     configureSecurity(client)
     configureRouting(client)

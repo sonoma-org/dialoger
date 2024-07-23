@@ -33,15 +33,6 @@ body{
   text-align: center;
 }
 
-.wrapper .picture img{
-  width: 15%;
-}
-
-.wrapper .picture{
-  display: flex;
-  justify-content: center;
-}
-
 .wrapper .input-box{
   width: 100%;
   height: 50px;
@@ -103,4 +94,13 @@ body{
 .register-link p a:hover{
   text-decoration: underline;
   color: green;
+}
+
+.meme {
+  position: relative;
+  left: 145px
+}
+
+.meme img{
+  width: 15%;
 }

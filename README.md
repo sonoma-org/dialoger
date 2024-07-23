@@ -19,13 +19,13 @@ To work you need a PostgreSQL database ( You can find an example of docker compo
 ###### Windows
 ```bash
 gradlew build
-gradlew run
+gradlew run -D AUTH_ADDRESS=http://127.0.0.1:1211/
 ```
 ###### MacOS/Linux
 ```bash
 chmod +x ./gradlew
 ./gradlew build
-./gradlew run
+AUTH_ADDRESS=http://127.0.0.1:1211/ ./gradlew run
 ```
 ##### Docker
 ```bash
